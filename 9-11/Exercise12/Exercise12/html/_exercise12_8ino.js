@@ -1,0 +1,26 @@
+var _exercise12_8ino =
+[
+    [ "buttonpin", "_exercise12_8ino.html#ad91c7e8b6b8a3ad630c008f22efab43b", null ],
+    [ "led1pin", "_exercise12_8ino.html#a30cb8f16ff76c197819433a7b63ae69b", null ],
+    [ "led2pin", "_exercise12_8ino.html#a656d1eabb312f181b90d2b6f8dbd52cd", null ],
+    [ "led3pin", "_exercise12_8ino.html#a4f6bb4c59f34fccba989bcef1121c515", null ],
+    [ "led4pin", "_exercise12_8ino.html#a9540c16d188335da4f022c0433d784a5", null ],
+    [ "led5pin", "_exercise12_8ino.html#a82cba6a7e24e8aaeb4573299b9928c3f", null ],
+    [ "TEMP", "_exercise12_8ino.html#a10bed19ceedeb2c12c5aad6de1d3b1a1", null ],
+    [ "lcd", "_exercise12_8ino.html#a817f6545bce2c289122706845ed0894c", null ],
+    [ "loop", "_exercise12_8ino.html#afe461d27b9c48d5921c00d521181f12f", null ],
+    [ "setup", "_exercise12_8ino.html#a4fc01d736fe50cf5b977f755b675f11d", null ],
+    [ "countto", "_exercise12_8ino.html#ac1cbcc2471d25c93835c82146de259f7", null ],
+    [ "d4", "_exercise12_8ino.html#a8e27f8b906cf9f57c1124234c459792e", null ],
+    [ "d5", "_exercise12_8ino.html#ad52d32e739245fa26d6cb728bbf31dd0", null ],
+    [ "d6", "_exercise12_8ino.html#ad1022e721e1fa576ed67afb73831ed70", null ],
+    [ "d7", "_exercise12_8ino.html#a7ce0880460ab9afdbb59e308d6f93e04", null ],
+    [ "en", "_exercise12_8ino.html#a41ca0f2ba69e4a0dc418933afda4ee05", null ],
+    [ "hasbeenhit", "_exercise12_8ino.html#a315ef3e4b956de9a55c86ca3d2cd3985", null ],
+    [ "hasbeenreleased", "_exercise12_8ino.html#ab42a7e20bcc209307c8b39d493cca1bc", null ],
+    [ "hits", "_exercise12_8ino.html#a6eb4f6f645392a720b883b687918880f", null ],
+    [ "ledstate", "_exercise12_8ino.html#a1b0cac74c6665e1fe033521d0c955346", null ],
+    [ "misses", "_exercise12_8ino.html#acb6b7e41e677928ff3ee0f9930319eee", null ],
+    [ "rs", "_exercise12_8ino.html#a6e17894d69614d24591844d4d934dd24", null ],
+    [ "timer", "_exercise12_8ino.html#aff982442a4ea295bda006ec16902d94d", null ]
+];

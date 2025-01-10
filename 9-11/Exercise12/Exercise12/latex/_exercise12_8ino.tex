@@ -1,0 +1,227 @@
+\doxysection{Exercise12.\+ino File Reference}
+\hypertarget{_exercise12_8ino}{}\label{_exercise12_8ino}\index{Exercise12.ino@{Exercise12.ino}}
+{\ttfamily \#include $<$Liquid\+Crystal.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_a30cb8f16ff76c197819433a7b63ae69b}{led1pin}}~13
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_a656d1eabb312f181b90d2b6f8dbd52cd}{led2pin}}~9
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_a4f6bb4c59f34fccba989bcef1121c515}{led3pin}}~8
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_a9540c16d188335da4f022c0433d784a5}{led4pin}}~3
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_a82cba6a7e24e8aaeb4573299b9928c3f}{led5pin}}~2
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_ad91c7e8b6b8a3ad630c008f22efab43b}{buttonpin}}~10
+\item 
+\#define \mbox{\hyperlink{_exercise12_8ino_a10bed19ceedeb2c12c5aad6de1d3b1a1}{TEMP}}~A0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Liquid\+Crystal \mbox{\hyperlink{_exercise12_8ino_a817f6545bce2c289122706845ed0894c}{lcd}} (\mbox{\hyperlink{_exercise12_8ino_a6e17894d69614d24591844d4d934dd24}{rs}}, \mbox{\hyperlink{_exercise12_8ino_a41ca0f2ba69e4a0dc418933afda4ee05}{en}}, \mbox{\hyperlink{_exercise12_8ino_a8e27f8b906cf9f57c1124234c459792e}{d4}}, \mbox{\hyperlink{_exercise12_8ino_ad52d32e739245fa26d6cb728bbf31dd0}{d5}}, \mbox{\hyperlink{_exercise12_8ino_ad1022e721e1fa576ed67afb73831ed70}{d6}}, \mbox{\hyperlink{_exercise12_8ino_a7ce0880460ab9afdbb59e308d6f93e04}{d7}})
+\item 
+void \mbox{\hyperlink{_exercise12_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{_exercise12_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_exercise12_8ino_a6e17894d69614d24591844d4d934dd24}{rs}} = 12
+\item 
+const int \mbox{\hyperlink{_exercise12_8ino_a41ca0f2ba69e4a0dc418933afda4ee05}{en}} = 11
+\item 
+const int \mbox{\hyperlink{_exercise12_8ino_a8e27f8b906cf9f57c1124234c459792e}{d4}} = 7
+\item 
+const int \mbox{\hyperlink{_exercise12_8ino_ad52d32e739245fa26d6cb728bbf31dd0}{d5}} = 6
+\item 
+const int \mbox{\hyperlink{_exercise12_8ino_ad1022e721e1fa576ed67afb73831ed70}{d6}} = 5
+\item 
+const int \mbox{\hyperlink{_exercise12_8ino_a7ce0880460ab9afdbb59e308d6f93e04}{d7}} = 4
+\item 
+unsigned long int \mbox{\hyperlink{_exercise12_8ino_aff982442a4ea295bda006ec16902d94d}{timer}} = 0
+\item 
+unsigned char \mbox{\hyperlink{_exercise12_8ino_a1b0cac74c6665e1fe033521d0c955346}{ledstate}} = 0
+\item 
+int \mbox{\hyperlink{_exercise12_8ino_a6eb4f6f645392a720b883b687918880f}{hits}} = 0
+\item 
+int \mbox{\hyperlink{_exercise12_8ino_acb6b7e41e677928ff3ee0f9930319eee}{misses}} = 0
+\item 
+unsigned long int \mbox{\hyperlink{_exercise12_8ino_ac1cbcc2471d25c93835c82146de259f7}{countto}} = 32000
+\item 
+char \mbox{\hyperlink{_exercise12_8ino_ab42a7e20bcc209307c8b39d493cca1bc}{hasbeenreleased}} = 1
+\item 
+char \mbox{\hyperlink{_exercise12_8ino_a315ef3e4b956de9a55c86ca3d2cd3985}{hasbeenhit}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_exercise12_8ino_ad91c7e8b6b8a3ad630c008f22efab43b}\index{Exercise12.ino@{Exercise12.ino}!buttonpin@{buttonpin}}
+\index{buttonpin@{buttonpin}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{buttonpin}{buttonpin}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_ad91c7e8b6b8a3ad630c008f22efab43b} 
+\#define buttonpin~10}
+
+\Hypertarget{_exercise12_8ino_a30cb8f16ff76c197819433a7b63ae69b}\index{Exercise12.ino@{Exercise12.ino}!led1pin@{led1pin}}
+\index{led1pin@{led1pin}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{led1pin}{led1pin}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a30cb8f16ff76c197819433a7b63ae69b} 
+\#define led1pin~13}
+
+\Hypertarget{_exercise12_8ino_a656d1eabb312f181b90d2b6f8dbd52cd}\index{Exercise12.ino@{Exercise12.ino}!led2pin@{led2pin}}
+\index{led2pin@{led2pin}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{led2pin}{led2pin}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a656d1eabb312f181b90d2b6f8dbd52cd} 
+\#define led2pin~9}
+
+\Hypertarget{_exercise12_8ino_a4f6bb4c59f34fccba989bcef1121c515}\index{Exercise12.ino@{Exercise12.ino}!led3pin@{led3pin}}
+\index{led3pin@{led3pin}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{led3pin}{led3pin}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a4f6bb4c59f34fccba989bcef1121c515} 
+\#define led3pin~8}
+
+\Hypertarget{_exercise12_8ino_a9540c16d188335da4f022c0433d784a5}\index{Exercise12.ino@{Exercise12.ino}!led4pin@{led4pin}}
+\index{led4pin@{led4pin}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{led4pin}{led4pin}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a9540c16d188335da4f022c0433d784a5} 
+\#define led4pin~3}
+
+\Hypertarget{_exercise12_8ino_a82cba6a7e24e8aaeb4573299b9928c3f}\index{Exercise12.ino@{Exercise12.ino}!led5pin@{led5pin}}
+\index{led5pin@{led5pin}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{led5pin}{led5pin}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a82cba6a7e24e8aaeb4573299b9928c3f} 
+\#define led5pin~2}
+
+\Hypertarget{_exercise12_8ino_a10bed19ceedeb2c12c5aad6de1d3b1a1}\index{Exercise12.ino@{Exercise12.ino}!TEMP@{TEMP}}
+\index{TEMP@{TEMP}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{TEMP}{TEMP}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a10bed19ceedeb2c12c5aad6de1d3b1a1} 
+\#define TEMP~A0}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_exercise12_8ino_a817f6545bce2c289122706845ed0894c}\index{Exercise12.ino@{Exercise12.ino}!lcd@{lcd}}
+\index{lcd@{lcd}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{lcd()}{lcd()}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a817f6545bce2c289122706845ed0894c} 
+Liquid\+Crystal lcd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_exercise12_8ino_a6e17894d69614d24591844d4d934dd24}{rs}}}]{}{, }\item[{\mbox{\hyperlink{_exercise12_8ino_a41ca0f2ba69e4a0dc418933afda4ee05}{en}}}]{}{, }\item[{\mbox{\hyperlink{_exercise12_8ino_a8e27f8b906cf9f57c1124234c459792e}{d4}}}]{}{, }\item[{\mbox{\hyperlink{_exercise12_8ino_ad52d32e739245fa26d6cb728bbf31dd0}{d5}}}]{}{, }\item[{\mbox{\hyperlink{_exercise12_8ino_ad1022e721e1fa576ed67afb73831ed70}{d6}}}]{}{, }\item[{\mbox{\hyperlink{_exercise12_8ino_a7ce0880460ab9afdbb59e308d6f93e04}{d7}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise12_8ino_afe461d27b9c48d5921c00d521181f12f}\index{Exercise12.ino@{Exercise12.ino}!loop@{loop}}
+\index{loop@{loop}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Counts up to counto and changes state and turns on corresponding LED
+
+turn on led 1 and turn every other led off
+
+When \# of succesfull hits is 8 it should be random
+
+check which state has been chosen
+
+turn on led 1 and turn every other led off
+
+if button is clicked
+
+if 3rd led is on it is succesful hit
+
+blink sequence when a succesful hit is made
+
+if 3rd led is not on is is a miss
+
+update hits and misses
+
+button has been released\Hypertarget{_exercise12_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{Exercise12.ino@{Exercise12.ino}!setup@{setup}}
+\index{setup@{setup}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+define pinmodes
+
+initialize lcd
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_exercise12_8ino_ac1cbcc2471d25c93835c82146de259f7}\index{Exercise12.ino@{Exercise12.ino}!countto@{countto}}
+\index{countto@{countto}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{countto}{countto}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_ac1cbcc2471d25c93835c82146de259f7} 
+unsigned long int countto = 32000}
+
+\Hypertarget{_exercise12_8ino_a8e27f8b906cf9f57c1124234c459792e}\index{Exercise12.ino@{Exercise12.ino}!d4@{d4}}
+\index{d4@{d4}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{d4}{d4}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a8e27f8b906cf9f57c1124234c459792e} 
+const int d4 = 7}
+
+\Hypertarget{_exercise12_8ino_ad52d32e739245fa26d6cb728bbf31dd0}\index{Exercise12.ino@{Exercise12.ino}!d5@{d5}}
+\index{d5@{d5}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{d5}{d5}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_ad52d32e739245fa26d6cb728bbf31dd0} 
+const int d5 = 6}
+
+\Hypertarget{_exercise12_8ino_ad1022e721e1fa576ed67afb73831ed70}\index{Exercise12.ino@{Exercise12.ino}!d6@{d6}}
+\index{d6@{d6}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{d6}{d6}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_ad1022e721e1fa576ed67afb73831ed70} 
+const int d6 = 5}
+
+\Hypertarget{_exercise12_8ino_a7ce0880460ab9afdbb59e308d6f93e04}\index{Exercise12.ino@{Exercise12.ino}!d7@{d7}}
+\index{d7@{d7}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{d7}{d7}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a7ce0880460ab9afdbb59e308d6f93e04} 
+const int d7 = 4}
+
+\Hypertarget{_exercise12_8ino_a41ca0f2ba69e4a0dc418933afda4ee05}\index{Exercise12.ino@{Exercise12.ino}!en@{en}}
+\index{en@{en}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{en}{en}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a41ca0f2ba69e4a0dc418933afda4ee05} 
+const int en = 11}
+
+\Hypertarget{_exercise12_8ino_a315ef3e4b956de9a55c86ca3d2cd3985}\index{Exercise12.ino@{Exercise12.ino}!hasbeenhit@{hasbeenhit}}
+\index{hasbeenhit@{hasbeenhit}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{hasbeenhit}{hasbeenhit}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a315ef3e4b956de9a55c86ca3d2cd3985} 
+char hasbeenhit = 0}
+
+\Hypertarget{_exercise12_8ino_ab42a7e20bcc209307c8b39d493cca1bc}\index{Exercise12.ino@{Exercise12.ino}!hasbeenreleased@{hasbeenreleased}}
+\index{hasbeenreleased@{hasbeenreleased}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{hasbeenreleased}{hasbeenreleased}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_ab42a7e20bcc209307c8b39d493cca1bc} 
+char hasbeenreleased = 1}
+
+\Hypertarget{_exercise12_8ino_a6eb4f6f645392a720b883b687918880f}\index{Exercise12.ino@{Exercise12.ino}!hits@{hits}}
+\index{hits@{hits}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{hits}{hits}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a6eb4f6f645392a720b883b687918880f} 
+int hits = 0}
+
+\Hypertarget{_exercise12_8ino_a1b0cac74c6665e1fe033521d0c955346}\index{Exercise12.ino@{Exercise12.ino}!ledstate@{ledstate}}
+\index{ledstate@{ledstate}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{ledstate}{ledstate}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a1b0cac74c6665e1fe033521d0c955346} 
+unsigned char ledstate = 0}
+
+\Hypertarget{_exercise12_8ino_acb6b7e41e677928ff3ee0f9930319eee}\index{Exercise12.ino@{Exercise12.ino}!misses@{misses}}
+\index{misses@{misses}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{misses}{misses}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_acb6b7e41e677928ff3ee0f9930319eee} 
+int misses = 0}
+
+\Hypertarget{_exercise12_8ino_a6e17894d69614d24591844d4d934dd24}\index{Exercise12.ino@{Exercise12.ino}!rs@{rs}}
+\index{rs@{rs}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{rs}{rs}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_a6e17894d69614d24591844d4d934dd24} 
+const int rs = 12}
+
+\Hypertarget{_exercise12_8ino_aff982442a4ea295bda006ec16902d94d}\index{Exercise12.ino@{Exercise12.ino}!timer@{timer}}
+\index{timer@{timer}!Exercise12.ino@{Exercise12.ino}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily \label{_exercise12_8ino_aff982442a4ea295bda006ec16902d94d} 
+unsigned long int timer = 0}
+
