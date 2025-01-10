@@ -10,6 +10,7 @@ var _exercise12_8ino =
     [ "lcd", "_exercise12_8ino.html#a817f6545bce2c289122706845ed0894c", null ],
     [ "loop", "_exercise12_8ino.html#afe461d27b9c48d5921c00d521181f12f", null ],
     [ "setup", "_exercise12_8ino.html#a4fc01d736fe50cf5b977f755b675f11d", null ],
+    [ "write_leds_low", "_exercise12_8ino.html#ad690b94d4b4e64c3456fb29071dba0ab", null ],
     [ "countto", "_exercise12_8ino.html#ac1cbcc2471d25c93835c82146de259f7", null ],
     [ "d4", "_exercise12_8ino.html#a8e27f8b906cf9f57c1124234c459792e", null ],
     [ "d5", "_exercise12_8ino.html#ad52d32e739245fa26d6cb728bbf31dd0", null ],

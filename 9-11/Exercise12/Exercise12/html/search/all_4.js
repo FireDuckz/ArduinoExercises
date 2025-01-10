@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hasbeenhit_0',['hasbeenhit',['../_exercise12_8ino.html#a315ef3e4b956de9a55c86ca3d2cd3985',1,'Exercise12.ino']]],
-  ['hasbeenreleased_1',['hasbeenreleased',['../_exercise12_8ino.html#ab42a7e20bcc209307c8b39d493cca1bc',1,'Exercise12.ino']]],
-  ['hits_2',['hits',['../_exercise12_8ino.html#a6eb4f6f645392a720b883b687918880f',1,'Exercise12.ino']]]
+  ['en_0',['en',['../_exercise12_8ino.html#a41ca0f2ba69e4a0dc418933afda4ee05',1,'Exercise12.ino']]],
+  ['exercise_2012_1',['Exercise 12',['../index.html',1,'']]],
+  ['exercise12_2eino_2',['Exercise12.ino',['../_exercise12_8ino.html',1,'']]]
 ];

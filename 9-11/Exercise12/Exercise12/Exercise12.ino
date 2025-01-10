@@ -1,3 +1,12 @@
+/**
+ * @file Exercise12.ino
+ * @author s225271, s241830
+ * @mainpage Exercise 12
+ * @section Button_Game
+ * 
+ * Catch the led game by group 11
+ */
+
 #include <LiquidCrystal.h>
 #define led1pin 13
 #define led2pin 9
@@ -20,6 +29,9 @@ int misses = 0;
 unsigned long int countto = 32000;
 char hasbeenreleased = 1;
 char hasbeenhit = 0;
+  /**
+   * @brief setups program
+   */
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -42,6 +54,9 @@ void setup() {
   lcd.print("Misses: 0");
 }
 
+  /**
+   * @brief Loop around forever
+   */
 void loop() {
   //! Counts up to counto and changes state and turns on corresponding LED
   if (timer >= countto && (hits != 8)){
@@ -49,52 +64,33 @@ void loop() {
     switch(ledstate){
       case 0:
         ledstate = 1;
+        write_leds_low();
         digitalWrite(led1pin,HIGH); //! turn on led 1 and turn every other led off
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
       break; 
       case 1:
         ledstate = 2;
-        digitalWrite(led1pin,LOW);
+        write_leds_low();
         digitalWrite(led2pin,HIGH);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
       break;
       case 2:
         ledstate = 3;
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
+        write_leds_low();
         digitalWrite(led3pin,HIGH);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
       break;
       case 3:
         ledstate = 4;
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
+        write_leds_low();
         digitalWrite(led4pin,HIGH);
-        digitalWrite(led5pin,LOW);
       break;
       case 4:
         ledstate = 0;
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
+        write_leds_low();
         digitalWrite(led5pin,HIGH);
         
       break;
       default:
         ledstate = 0;
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
+        write_leds_low();
       }    
   }
 
@@ -104,47 +100,28 @@ void loop() {
      timer = 0;
      switch(ledstate-1){ //! check which state has been chosen 
       case 0:
+        write_leds_low();
         digitalWrite(led1pin,HIGH); //! turn on led 1 and turn every other led off
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
       break; 
       case 1:
-        digitalWrite(led1pin,LOW);
+        write_leds_low();
         digitalWrite(led2pin,HIGH);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
       break;
       case 2:
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,HIGH);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
+        write_leds_low();
+        digitalWrite(led3pin,HIGH);  
       break;
       case 3:
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
+        write_leds_low();
         digitalWrite(led4pin,HIGH);
-        digitalWrite(led5pin,LOW);
       break;
       case 4:
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
+        write_leds_low();
         digitalWrite(led5pin,HIGH);
         
       break;
       default:
-        digitalWrite(led1pin,LOW);
-        digitalWrite(led2pin,LOW);
-        digitalWrite(led3pin,LOW);
-        digitalWrite(led4pin,LOW);
-        digitalWrite(led5pin,LOW);
+        write_leds_low();
       }    
   }
   timer++; // update timer
@@ -165,21 +142,13 @@ void loop() {
           digitalWrite(led4pin,HIGH);
           digitalWrite(led5pin,HIGH);  
           delay(100);
-          digitalWrite(led1pin,LOW);
-          digitalWrite(led2pin,LOW);
-          digitalWrite(led3pin,LOW);
-          digitalWrite(led4pin,LOW);
-          digitalWrite(led5pin,LOW);
+          write_leds_low();
           delay(100);
         }
         ledstate = 0;
     }else{
       misses++; //! if 3rd led is not on is is a miss
-      digitalWrite(led1pin,LOW);
-      digitalWrite(led2pin,LOW);
-      digitalWrite(led3pin,LOW);
-      digitalWrite(led4pin,LOW);
-      digitalWrite(led5pin,LOW);
+      write_leds_low();
       delay(1000);
     }
     //! update hits and misses
@@ -192,4 +161,17 @@ void loop() {
   if(digitalRead(buttonpin) && hasbeenreleased == 0){ //! button has been released
     hasbeenreleased = 1;
     }
+}
+
+ /** 
+   *  @brief turns off all leds
+   *  @param none
+   *  @return none
+   */
+void write_leds_low(){
+  digitalWrite(led1pin,LOW);
+  digitalWrite(led2pin,LOW);
+  digitalWrite(led3pin,LOW);
+  digitalWrite(led4pin,LOW);
+  digitalWrite(led5pin,LOW);
 }
