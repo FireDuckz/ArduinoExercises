@@ -7,6 +7,7 @@
 
 #define buttonpin 10
 
+// initalize lcd display
 const int rs = 12, en = 11, d4 = 7, d5 = 6, d6 = 5, d7 = 4; 
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
@@ -48,7 +49,7 @@ void loop() {
     switch(ledstate){
       case 0:
         ledstate = 1;
-        digitalWrite(led1pin,HIGH);
+        digitalWrite(led1pin,HIGH); // turn on led 1 and turn every other led off
         digitalWrite(led2pin,LOW);
         digitalWrite(led3pin,LOW);
         digitalWrite(led4pin,LOW);
@@ -103,7 +104,7 @@ void loop() {
      timer = 0;
      switch(ledstate-1){ // check which state has been chosen 
       case 0:
-        digitalWrite(led1pin,HIGH);
+        digitalWrite(led1pin,HIGH); // turn on led 1 and turn every other led off
         digitalWrite(led2pin,LOW);
         digitalWrite(led3pin,LOW);
         digitalWrite(led4pin,LOW);
@@ -181,6 +182,7 @@ void loop() {
       digitalWrite(led5pin,LOW);
       delay(1000);
     }
+    // update hits and misses
     lcd.setCursor(6,0);
     lcd.print(hits);
 
