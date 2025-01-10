@@ -22,6 +22,8 @@ char hasbeenhit = 0;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+
+  // define pinmodes
   pinMode(TEMP, INPUT);
   pinMode(led1pin, OUTPUT);
   pinMode(led2pin, OUTPUT);
@@ -30,6 +32,7 @@ void setup() {
   pinMode(led5pin, OUTPUT);
   pinMode(buttonpin, INPUT_PULLUP);
   
+  // initialize lcd
   lcd.begin(16,2);
   lcd.clear();
   lcd.setCursor(0,0);
@@ -39,9 +42,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  // we obtain analog value from 0 to 1023
-
+  // Counts up to counto and changes state and turns on corresponding LED
   if (timer >= countto && (hits != 8)){
     timer = 0;
     switch(ledstate){
@@ -96,10 +97,11 @@ void loop() {
       }    
   }
 
-  if( timer >= 15000 && hits == 8 ){ // random
-     ledstate = random(1,5);
+  // When # of succesfull hits is 8 it should be random
+  if( timer >= 15000 && hits == 8 ){ 
+     ledstate = random(1,5); 
      timer = 0;
-     switch(ledstate-1){
+     switch(ledstate-1){ // check which state has been chosen 
       case 0:
         digitalWrite(led1pin,HIGH);
         digitalWrite(led2pin,LOW);
@@ -144,18 +146,18 @@ void loop() {
         digitalWrite(led5pin,LOW);
       }    
   }
-  timer++; 
+  timer++; // update timer
   
 
-  if( !(digitalRead(buttonpin)) && hasbeenreleased == 1) { 
+  if( !(digitalRead(buttonpin)) && hasbeenreleased == 1) { // if button is clicked
     hasbeenreleased = 0;
-    if(ledstate == 3){ // if 3rd led is on
+    if(ledstate == 3){ // if 3rd led is on it is succesful hit
         hits++;
         countto = countto - 4000;
         if(countto < 6000){
           countto = 6000;
           }
-        for (int i = 0 ; i<4; i++){
+        for (int i = 0 ; i<4; i++){ // blink sequence when a succesful hit is made
           digitalWrite(led1pin,HIGH);
           digitalWrite(led2pin,HIGH);
           digitalWrite(led3pin,HIGH);
@@ -171,7 +173,7 @@ void loop() {
         }
         ledstate = 0;
     }else{
-      misses++;
+      misses++; // if 3rd led is not on is is a miss
       digitalWrite(led1pin,LOW);
       digitalWrite(led2pin,LOW);
       digitalWrite(led3pin,LOW);
@@ -185,7 +187,7 @@ void loop() {
     lcd.setCursor(8,1);
     lcd.print(misses);  
   }
-  if(digitalRead(buttonpin) && hasbeenreleased == 0){
+  if(digitalRead(buttonpin) && hasbeenreleased == 0){ // button has been released
     hasbeenreleased = 1;
     }
 }
